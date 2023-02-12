@@ -3,7 +3,7 @@ import Script from "next/script";
 import { Scene } from "aframe-react";
 import { useEffect, useRef } from "react";
 
-export const VideoComponent = () => {
+export const VideoComponent = ({ url }) => {
   const videoEl = useRef(null);
 
   const attemptPlay = () => {
@@ -33,7 +33,7 @@ export const VideoComponent = () => {
             <video
               id="videoBunny"
               preload="auto"
-              src="/video1.mp4"
+              src={url}
               crossOrigin="anonymous"
               controls
               muted={false}

@@ -2,7 +2,7 @@ import React from "react";
 import Script from "next/script";
 import { Scene } from "aframe-react";
 
-export const Image = () => {
+export const Image = ({ url }) => {
   return (
     <div className="w-full h-screen bg-black">
       <Script
@@ -14,10 +14,7 @@ export const Image = () => {
 
       <Scene>
         <a-scene vr-mode-ui="enabled: true">
-          <a-sky
-            src="https://images.squarespace-cdn.com/content/v1/5568ec94e4b06c17240d5220/1443508568279-5KM5IBNCU4HDIQGMTCC3/Homepage+LEI.jpg?format=2500w"
-            rotation="0 -130 0"
-          ></a-sky>
+          <a-sky src={url} rotation="0 -130 0"></a-sky>
         </a-scene>
       </Scene>
     </div>

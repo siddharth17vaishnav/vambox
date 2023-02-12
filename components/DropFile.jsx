@@ -1,6 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
+import { useRouter } from "next/router";
 
 export const DropFile = () => {
+  const [file, setFile] = useState();
+  const [error, setError] = useState();
+  const router = useRouter();
+  const onSubmit = (type) => {
+    console.log(type);
+    if (file && file?.length !== 0) {
+      if (
+        file.includes("youtube") ||
+        file.includes("ytube") ||
+        file.includes("yt.com")
+      ) {
+        setError("We dont accept youtube links, try another link");
+      } else {
+        setError("");
+        if (type === "image") {
+          router.push(`/stream-image?${file}`).then();
+        } else if (type === "video") {
+          router.push(`/stream-video?${file}`).then();
+        }
+      }
+    }
+  };
   return (
     <div className="w-full pb-[92px] items-center bg-[#dfdbe6]">
       <div className="text-3xl">
@@ -10,7 +33,6 @@ export const DropFile = () => {
           </span>
         </h5>
       </div>
-
       <div className=" mt-10 gap-[10px] flex flex-wrap justify-center mx-auto">
         <div>
           <div className="parent-container h-40 w-96 cursor-pointer rounded-xl bg-gray-100 border-dashed border-2 border-gray-400 relative flex justify-center items-center relative">
@@ -18,6 +40,7 @@ export const DropFile = () => {
               type="file"
               id="input-file"
               className="absolute inset-0 opacity-0 cursor-pointer"
+              onChange={(e) => setFile(e.target.files[0].name)}
             />
             <div className="w-64 h-20 flex justify-center items-center">
               <div className="mr-2">
@@ -51,6 +74,7 @@ export const DropFile = () => {
                 type="email"
                 className="mt-1 px-3 py-2 bg-gray-100 border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-blue-500 block w-full rounded-md sm:text-sm focus:ring-1"
                 placeholder="Enter image url link."
+                onChange={(e) => setFile(e.target.value)}
               />
               <p className="mt-2 invisible peer-invalid:visible text-pink-600 text-sm">
                 Enter valid link.
@@ -60,6 +84,7 @@ export const DropFile = () => {
               <button
                 className="items-center rounded-full px-8 py-1 border border-white font-semibold  hover:bg-white hover:text-black"
                 type="button"
+                onClick={() => onSubmit("image")}
               >
                 Go
               </button>
@@ -70,6 +95,7 @@ export const DropFile = () => {
         <div>
           <div className="parent-container h-40 w-96 cursor-pointer rounded-xl bg-gray-100 border-dashed border-2 border-gray-400 relative flex justify-center items-center relative">
             <input
+              onChange={(e) => setFile(e.target.files[0].name)}
               type="file"
               id="input-file"
               className="absolute inset-0 opacity-0 cursor-pointer"
@@ -106,6 +132,7 @@ export const DropFile = () => {
                 type="email"
                 className="mt-1 px-3 py-2 bg-gray-100 border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-blue-500 block w-full rounded-md sm:text-sm focus:ring-1"
                 placeholder="Enter video url link."
+                onChange={(e) => setFile(e.target.value)}
               />
               <p className="mt-2 invisible peer-invalid:visible text-pink-600 text-sm">
                 Youtube link not supported.
@@ -115,6 +142,7 @@ export const DropFile = () => {
               <button
                 className="items-center rounded-full px-8 py-1 border border-white font-semibold  hover:bg-white hover:text-black"
                 type="button"
+                onClick={() => onSubmit("video")}
               >
                 Go
               </button>
@@ -122,6 +150,9 @@ export const DropFile = () => {
           </form>
         </div>
       </div>
+      <p className={"max-w-[790px] text-red-500 mt-4 font-semibold mx-auto"}>
+        {error}
+      </p>
     </div>
   );
 };
