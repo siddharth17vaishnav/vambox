@@ -2,6 +2,7 @@ import Head from "next/head";
 import Hero from "@/components/Hero";
 import Description from "@/components/Description";
 import DropFile from "@/components/DropFile";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         />
         <Description />
         <DropFile />
+        <Footer />
       </main>
     </>
   );
