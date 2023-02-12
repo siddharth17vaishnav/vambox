@@ -3,6 +3,8 @@ import Hero from "@/components/Hero";
 import Description from "@/components/Description";
 import DropFile from "@/components/DropFile";
 import Footer from "@/components/Footer";
+import VideoComponent from "@/components/VideoComponent";
+import ImageComponent from "@/components/ImageComponent";
 
 export default function Home() {
   return (
@@ -21,6 +23,8 @@ export default function Home() {
         <Description />
         <DropFile />
         <Footer />
+        {/*<VideoComponent/>*/}
+        {/*<ImageComponent/>*/}
       </main>
     </>
   );
