@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Hero from "@/components/Hero";
 import Description from "@/components/Description";
+import DropFile from "@/components/DropFile";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
           message="Enjoy Unlimited 360* Videos and Images in VR for FREE."
         />
         <Description />
+        <DropFile />
       </main>
     </>
   );
