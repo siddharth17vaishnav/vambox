@@ -59,9 +59,6 @@ export const DropFile = () => {
                 <p className="text-gray-500 mb-1 text-lg file_name">
                   Upload your image
                 </p>
-                <p className="text-xs text-gray-500">
-                  <span className="text-blue-500">choose</span> or drag and drop
-                </p>
               </div>
             </div>
           </div>
@@ -117,9 +114,7 @@ export const DropFile = () => {
                 <p className="text-gray-500 mb-1 text-lg file_name">
                   Upload your video
                 </p>
-                <p className="text-xs text-gray-500">
-                  <span className="text-blue-500">choose</span> or drag and drop
-                </p>
+                
               </div>
             </div>
           </div>
