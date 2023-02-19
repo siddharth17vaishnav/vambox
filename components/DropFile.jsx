@@ -25,17 +25,17 @@ export const DropFile = () => {
     }
   };
   return (
-    <div className="w-full pb-[92px] items-center bg-[#dfdbe6]">
+    <div className="w-full pb-[80px] items-center bg-[#dfdbe6]">
       <div className="text-3xl">
-        <h5 className="text-center py-8 px-4 font-italic  mx-auto bg-[#242125] text-[#f4effa]">
+        <h5 className="text-center py-10 px-4 font-italic  mx-auto bg-[#242125] text-[#f4effa]">
           <span>
             <p>Stream unlimited images and videos in VR with one click.</p>
           </span>
         </h5>
       </div>
-      <div className=" mt-10 gap-[10px] flex flex-wrap justify-center mx-auto">
+      <div className=" mt-20 gap-[70px] flex flex-wrap justify-center mx-auto">
         <div>
-          <div className="parent-container h-40 w-96 cursor-pointer rounded-xl bg-gray-100 border-dashed border-2 border-gray-400 relative flex justify-center items-center relative">
+          <div className="parent-container h-40 w-76 cursor-pointer rounded-xl bg-gray-100 border-dashed border-2 border-gray-400 relative flex justify-center items-center relative">
             <input
               type="file"
               id="input-file"
@@ -93,7 +93,7 @@ export const DropFile = () => {
         </div>
 
         <div>
-          <div className="parent-container h-40 w-96 cursor-pointer rounded-xl bg-gray-100 border-dashed border-2 border-gray-400 relative flex justify-center items-center relative">
+          <div className="parent-container h-40 w-76 cursor-pointer rounded-xl bg-gray-100 border-dashed border-2 border-gray-400 relative flex justify-center items-center relative">
             <input
               onChange={(e) => setFile(e.target.files[0].name)}
               type="file"

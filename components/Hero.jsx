@@ -8,7 +8,7 @@ export const Hero = ({ heading, message }) => {
       <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/70 z-[2]" />
       <video src="/video1.mp4" autoPlay muted loop className="absolute" />
       <div className="items-center mt-[-20px] text-white/95 z-[2] ">
-        <h2 className="text-center text-[80px] px-4 font-bold mx-auto">
+        <h2 className="text-center md:text-[80px] sm:text-[80px] text-[40px] px-4 font-bold mx-auto">
           {heading}
         </h2>
         <p className="py-2 text-xl mt-[-5px] text-center mx-auto px-4">
