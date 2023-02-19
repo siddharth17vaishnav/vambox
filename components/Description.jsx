@@ -15,7 +15,7 @@ export const Description = () => {
           </span>
         </h5>
 
-        <div className="max-w-[1240px] text-xl text-[#343036] mx-auto py-8 px-4 text-justify ">
+        <div className="max-w-[1240px] text-xl text-[#343036] mx-auto py-10 px-4 text-justify ">
           <p>
             VAMBOX was born out of a painful experience of streaming video and
             images online in VR. To meet this need, we built a cool product for
@@ -106,6 +106,21 @@ export const Description = () => {
               <Typography>
                 You cannot stream any contents from youtube, due to our policy
                 issue. But, you can stream offline by downloading youtube video.
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel2a-content"
+              id="panel2a-header"
+            >
+              <Typography>How to be a part of vambox?</Typography>
+            </AccordionSummary>
+            <AccordionDetails className="text-white bg-[#343036]/40">
+              <Typography>
+                Vambox is a open source product by Vamverse LLP. Anyone can be a part of making it better for coming generation. 
+                Drop a email at "info@vamverse.com" with your idea and your passion to work with us. We welcome everyone...
               </Typography>
             </AccordionDetails>
           </Accordion>

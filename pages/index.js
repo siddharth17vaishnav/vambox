@@ -2,6 +2,7 @@ import Head from "next/head";
 import Hero from "@/components/Hero";
 import Description from "@/components/Description";
 import DropFile from "@/components/DropFile";
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import VideoComponent from "@/components/VideoComponent";
 import ImageComponent from "@/components/ImageComponent";
@@ -22,6 +23,7 @@ export default function Home() {
         />
         <Description />
         <DropFile />
+        <Contact />
         <Footer />
         {/*<VideoComponent/>*/}
         {/*<ImageComponent/>*/}
