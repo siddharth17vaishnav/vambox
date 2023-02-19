@@ -120,7 +120,7 @@ export const Description = () => {
             <AccordionDetails className="text-white bg-[#343036]/40">
               <Typography>
                 Vambox is a open source product by Vamverse LLP. Anyone can be a part of making it better for coming generation. 
-                Drop a email at "info@vamverse.com" with your idea and your passion to work with us. We welcome everyone...
+                Drop a email at `info@vamverse.com` with your idea and your passion to work with us. We welcome everyone...
               </Typography>
             </AccordionDetails>
           </Accordion>

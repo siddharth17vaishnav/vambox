@@ -11,7 +11,7 @@ export default function StreamVideo() {
     if (!router.asPath.split("?")[1]) {
       router.push("/");
     }
-  }, []);
+  }, [router]);
   return (
     <>
       <Head>
