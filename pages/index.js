@@ -4,8 +4,7 @@ import Description from "@/components/Description";
 import DropFile from "@/components/DropFile";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import VideoComponent from "@/components/VideoComponent";
-import ImageComponent from "@/components/ImageComponent";
+
 
 export default function Home() {
   return (
@@ -25,8 +24,6 @@ export default function Home() {
         <DropFile />
         <Contact />
         <Footer />
-        {/*<VideoComponent/>*/}
-        {/*<ImageComponent/>*/}
       </main>
     </>
   );
