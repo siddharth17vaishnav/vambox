@@ -1,10 +1,10 @@
 import Head from "next/head";
 import Footer from "@/components/Footer";
-import ImageComponent from "@/components/ImageComponent";
-import { useRouter } from "next/router";
-import { useState,useEffect } from "react";
+import ImageComponent from "@/components/StreamComponent";
+import { useState } from "react";
 import Modal from '@mui/material/Modal';
 import {Box,Typography} from "@mui/material"
+import { useRouter } from "next/router";
 
 const style = {
   position: 'absolute',
@@ -19,10 +19,11 @@ const style = {
 
 
 export default function StreamVideo() {
-  const [isOpen,setisOpen]=useState(true);
-  const [image,setImage]=useState(null)
+  const router = useRouter();
+  const url = router?.asPath?.split('?')[1]
+  const [isOpen,setisOpen]=useState(url ? false : true);
   const handleClose = () => setisOpen(false);
-  console.log(image)
+
   const handleChange=(e)=>{
     e.preventDefault();
     const sky = document.getElementById("360-image")
@@ -41,7 +42,7 @@ export default function StreamVideo() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <ImageComponent url={image} />
+        <ImageComponent  url = {url}/>
         <Footer />
       </main>
       <Modal
@@ -51,7 +52,7 @@ export default function StreamVideo() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography sx={{my:2,fontWeight:'bold'}}> Select Your Image</Typography>
+          <Typography sx={{my:2,fontWeight:'bold'}}> Select Your Image/Video</Typography>
         <div className="parent-container h-40 w-76 cursor-pointer rounded-xl bg-gray-100 border-dashed border-2 border-gray-400 relative flex justify-center items-center relative" >
             <input
               type="file"
@@ -74,7 +75,7 @@ export default function StreamVideo() {
               </div>
               <div  >
                 <p className="text-gray-500 mb-1 text-lg file_name">
-                  Upload your image
+                  Upload your Image/Video
                 </p>
               </div>
             </div>
