@@ -14,7 +14,7 @@ export const Image = ({ url }) => {
 
       <Scene>
         <a-scene vr-mode-ui="enabled: true">
-          <a-sky src={url} rotation="0 -130 0"/>
+          <a-sky id="360-image" rotation="0 -130 0"/>
         </a-scene>
       </Scene>
     </div>

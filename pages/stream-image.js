@@ -21,21 +21,15 @@ const style = {
 export default function StreamVideo() {
   const [isOpen,setisOpen]=useState(true);
   const [image,setImage]=useState(null)
-  // const router = useRouter();
-  // const url = router.asPath.split("?")[1];
-  // useEffect(() => {
-  //   if (!router.asPath.split("?")[1]) {
-  //     router.push("/");
-  //   }
-  // }, [router]);
-  const url=""
-  const handleOpen = () => setisOpen(true);
   const handleClose = () => setisOpen(false);
   console.log(image)
   const handleChange=(e)=>{
     e.preventDefault();
-    const objectURL = URL.createObjectURL(e.target.files[0])
-    setImage(objectURL)
+    const sky = document.getElementById("360-image")
+    const reader = new FileReader();
+    const setSky = (e)=>sky.setAttribute("material",{src:e.target.result})
+    reader.onload = setSky
+    reader.readAsDataURL(e.target.files[0])
     handleClose();
   }
   return (
