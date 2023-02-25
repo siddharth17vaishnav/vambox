@@ -1,5 +1,5 @@
 import {Routes,Route} from 'react-router-dom'
-import {HomeComponent} from './common/Path'
+import {HomeComponent ,StreamView} from './common/Path'
 function App() {
   
 
@@ -7,6 +7,7 @@ function App() {
     <div>
       <Routes>
         <Route path='/' element={<HomeComponent/>}/>
+        <Route path='/stream' element={<StreamView/>}/>
       </Routes>
     </div>
   )
