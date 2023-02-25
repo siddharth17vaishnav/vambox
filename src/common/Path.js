@@ -6,6 +6,7 @@ import Footer from '../components/Footer'
 import Hero from '../components/Hero'
 import StreamComponent from "../components/StreamComponent";
 import Stream from "../views/Stream";
+import Overlay from "../components/Overlay"
 
 
 export const HomeComponent = Home
@@ -16,3 +17,4 @@ export const FooterComponent=Footer
 export const HeroComponent=Hero
 export const StreamComponentComponent=StreamComponent
 export const StreamView = Stream
+export const OverlayCom = Overlay

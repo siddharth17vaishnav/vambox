@@ -4,7 +4,7 @@ import React from "react";
 export const Hero = ({ heading, message }) => {
   return (
     <div className="flex items-center justify-center h-screen  bg-fixed bg-center bg-cover">
-      <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/70 z-[2]" />
+      <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/70 z-[2] h-screen" />
       <video src="/video1.mp4" autoPlay muted loop className="absolute" />
       <div className="items-center mt-[-20px] text-white/95 z-[2] ">
         <h2 className="text-center md:text-[80px] sm:text-[80px] text-[40px] px-4 font-bold mx-auto">
@@ -20,20 +20,6 @@ export const Hero = ({ heading, message }) => {
           >
            <a href="#stream"> Explore Now</a>
           </button>
-        </div>
-        <div
-          style={{
-            position: "absolute",
-            top: 10,
-            left: 0,
-            pointerEvents: "none",
-            width: "100%",
-            height: "100%",
-          }}
-        >
-          <div className="class" style={{ position: "absolute" }}>
-            <img src={'/logo-vam.png'} alt="/" width={200} height={200} />
-          </div>
         </div>
       </div>
     </div>
