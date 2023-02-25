@@ -18,7 +18,7 @@ export const Hero = ({ heading, message }) => {
             className="items-center rounded-full px-4 py-2 border border-white font-semibold  hover:bg-white hover:text-black"
             type="button"
           >
-            Explore Now
+           <a href="#stream"> Explore Now</a>
           </button>
         </div>
         <div

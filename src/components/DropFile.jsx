@@ -13,11 +13,17 @@ export const DropFile = () => {
     }
     else{
       console.log("asd")
+      const isNotValid = file.includes('youtube')
+      if(isNotValid){
+        setError('We do not accept YOUTUBE links')
+      }
+      else{
       router(`/stream?id=${file}`)
-    }
+      setError("")
+    }}
   };
   return (
-    <div className="w-full pb-[80px] items-center bg-[#dfdbe6]">
+    <div className="w-full md:h-[515px] pb-[80px] items-center bg-[#dfdbe6]" id="stream">
       <div className="text-3xl">
         <h5 className="text-center py-10 px-4 font-italic  mx-auto bg-[#242125] text-[#f4effa]">
           <span>
@@ -25,8 +31,8 @@ export const DropFile = () => {
           </span>
         </h5>
       </div>
-      <div className=" mt-20 gap-[70px] flex flex-wrap justify-center mx-auto">
-        <div>
+      <div className=" mt-[7rem] gap-[70px] my-auto  flex flex-wrap justify-center mx-auto">
+        <div className="flex flex-col md:flex-row gap-4  md:gap-16">
           <div className="parent-container h-40 w-76 cursor-pointer rounded-xl bg-gray-100 border-dashed border-2 border-gray-400 relative flex justify-center items-center relative" >
             <div className="w-64 h-20 flex justify-center items-center">
               <div className="mr-2"  >
@@ -48,15 +54,16 @@ export const DropFile = () => {
               </div>
             </div>
           </div>
-          <form>
-            <h2 className="mx-auto text-center py-2 font-bold text-[#242125]">
-              OR
-            </h2>
+          <div className="m-auto"><h2 className="m-auto text-center py-2 font-bold text-[#242125]">
+          OR
+        </h2></div>
+          <form className="my-auto">
+            
             <label className="block">
               <input
                 type="text"
                 className="mt-1 px-3 py-2 bg-gray-100 border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-blue-500 block w-full rounded-md sm:text-sm focus:ring-1"
-                placeholder="Enter image url link."
+                placeholder="Enter image/video URL."
                 onChange={(e) => setFile(e.target.value)}
               />
               <p className="mt-2 invisible peer-invalid:visible text-pink-600 text-sm">
@@ -71,14 +78,15 @@ export const DropFile = () => {
               >
                 Go
               </button>
+              <p className={"max-w-[790px] text-red-500 mt-4 font-semibold mx-auto"}>
+              {error}
+            </p>
             </div>
           </form>
         </div>
 
       </div>
-      <p className={"max-w-[790px] text-red-500 mt-4 font-semibold mx-auto"}>
-        {error}
-      </p>
+     
     </div>
   );
 };
