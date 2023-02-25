@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.upload-icon {
+  fill: rgb(107,114,128)
+}
+
+.parent-container:hover p, .parent-container:hover .upload-icon {
+  color: royalblue;
+  fill: royalblue;
+}
+
+.parent-container:hover {
+  border-color: royalblue;
+}
+
+.custom-img {
+  background-image: url("https://images.pexels.com/photos/1261824/pexels-photo-1261824.jpeg?auto=compress&cs=tinysrgb&w=400");
+}
+
+.contact {
+  
+  font-family: 'Cookie', 'cursive'
+}
