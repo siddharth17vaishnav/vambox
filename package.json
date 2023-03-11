@@ -12,6 +12,7 @@
     "@belivvr/aframe-react-stereoscopic": "^0.1.2",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "@mui/base": "^5.0.0-alpha.120",
     "@mui/icons-material": "^5.11.9",
     "@mui/material": "^5.11.10",
     "aframe": "^1.4.1",
