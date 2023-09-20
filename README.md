@@ -1,1 +1,1 @@
-# vambox.
+# vambox
