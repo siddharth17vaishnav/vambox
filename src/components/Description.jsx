@@ -85,11 +85,11 @@ export const Description = () => {
               aria-controls="panel2a-content"
               id="panel2a-header"
             >
-              <Typography>Can I stream OTT plateform contents?</Typography>
+              <Typography>Can I stream OTT plateform contents for free?</Typography>
             </AccordionSummary>
             <AccordionDetails className="text-white bg-[#343036]/40">
               <Typography>
-                No, we have not integrated that feature, but we will be
+                No, we have not collaborated with any of the ott platforms, but we will be
                 releasing it soon. Stay connected.
               </Typography>
             </AccordionDetails>
