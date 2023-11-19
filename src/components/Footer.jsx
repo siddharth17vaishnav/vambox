@@ -5,7 +5,7 @@ export const Footer = () => {
     <div className="text-[15px]">
       <h5 className="text-center py-4 px-2 font-italic mx-auto bg-black text-white">
         <span>
-          <p className="py-3">© 2022 Vamverse LLP. All Rights Reserved. </p>
+          <p className="py-3">© 2022 Reealtech. All Rights Reserved. </p>
         </span>
       </h5>
     </div>

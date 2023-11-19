@@ -85,11 +85,11 @@ export const Description = () => {
               aria-controls="panel2a-content"
               id="panel2a-header"
             >
-              <Typography>Can I stream OTT plateform contents?</Typography>
+              <Typography>Can I stream OTT plateform contents for free?</Typography>
             </AccordionSummary>
             <AccordionDetails className="text-white bg-[#343036]/40">
               <Typography>
-                No, we have not integrated that feature, but we will be
+                No, we have not collaborated with any of the ott platforms, but we will be
                 releasing it soon. Stay connected.
               </Typography>
             </AccordionDetails>
@@ -115,12 +115,11 @@ export const Description = () => {
               aria-controls="panel2a-content"
               id="panel2a-header"
             >
-              <Typography>How to be a part of vambox?</Typography>
+              <Typography>Why some video show blank screen?</Typography>
             </AccordionSummary>
             <AccordionDetails className="text-white bg-[#343036]/40">
               <Typography>
-                Vambox is a open source product by Vamverse LLP. Anyone can be a part of making it better for coming generation. 
-                Drop a email at `info@vamverse.com` with your idea and your passion to work with us. We welcome everyone...
+                This maybe happens because of CORS policy or the server is not allowing to access the content. We are trying to resolve this, in the meantime you can download and access that content. 
               </Typography>
             </AccordionDetails>
           </Accordion>
